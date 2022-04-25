@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <h1 class="headerInTheme">About Tea</h1>
+  <div class="content ">
+    {{#each allPost}}
+    <div class="card">
+      <img src={{this.link}} class="img" alt="...">
+      <a class="themeLink" id="{{this.id}}" href="posts/{{this.id}}">
+        Название: {{this.name}}
+      </a>
+      <p class="themeLink">Страна: {{this.countryName}}</p>
+    </div>
+    {{/each}}
+  </div>
+</div>
+</div>

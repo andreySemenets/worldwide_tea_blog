@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tea Party</title>
+  <link rel='stylesheet' href='/css/style.css' />
+  <link rel='stylesheet' href='/css/map.css' />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script defer src="/js/authApplication.js"></script>
+  <script defer src="/js/postsApplication.js"></script>
+  <script defer src="/js/mapApplication.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/map">Блог Tea Party</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          {{#if name}}
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/posts">Чаи всего мира</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/posts/new">Добавить новый пост</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Привет, {{name}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  " href="/signout">Выход</a>
+          </li>
+          {{else}}
+          <li class="nav-item">
+            <a class="nav-link" href="/signin">Вход</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/">Регистрация</a>
+          </li>
+          {{/if}}
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  {{{body}}}
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<div class="container">
+  <p class="headerInTheme"> Редактировать</p>
+  <form class="editPost" id="{{onePostById.id}}">
+    <div class="mb-3">
+      <label for="disabledSelect" class="form-label">Название чая</label>
+      <input type="text" id="disabledTextInput" class="form-control" name="name" value="{{onePostById.name}}">
+    </div>
+    <div class="mb-3">
+      <label for="disabledSelect" class="form-label">Сорт чая</label>
+      <input type="text" id="disabledTextInput" class="form-control" name="type" value="{{onePostById.type}}">
+    </div>
+    <div class="mb-3">
+      <label for="disabledSelect" class="form-label">Место культивации</label>
+      <input type="text" id="disabledTextInput" class="form-control" name="country" value="{{onePostById.country}}">
+    </div>
+    <div class="mb-3">
+      <label for="disabledSelect" class="form-label">Описание</label>
+      <input type="text" id="disabledTextInput" class="form-control" name="description"
+        value="{{onePostById.description}}">
+    </div>
+    <div class="mb-3">
+      <label for="disabledSelect" class="form-label">Картинка</label>
+      <input type="text" id="disabledTextInput" class="form-control" name="link" value="{{onePostById.link}}">
+    </div>
+    <button type="submit" class="btn btn-primary">Редактировать запись</button>
+  </form>
+</div>

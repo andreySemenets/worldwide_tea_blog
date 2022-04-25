@@ -1,0 +1,58 @@
+<div class="wrapper">
+  <h2 class="headerInTheme">Название: {{onePostById.name}}</h2>
+  <div class="tea-info-container">
+    <div class="content-item">
+      <div class="tea-img">
+        <img src={{onePostById.link}} class="img-thumbnail tea-img" alt="...">
+      </div>
+      <div class="content-wrapper">
+        <div class="text-wrapper">
+          <div class="title">Страна:</div>
+          <div class="item">{{countryName}}</div>
+        </div>
+        <div class="text-wrapper">
+          <div class="title">Сорт: </div>
+          <div class="item">{{onePostById.type}}</div>
+        </div>
+        <div class="text-wrapper">
+          <div class="title">Описание:</div>
+          <div class="item"> {{onePostById.description}}</div>
+        </div>
+        {{#if name}}
+        <div class="button-edit">
+          <a class="delete" id="{{onePostById.id}}" href="/{{onePostById.id}}">Удалить</a>
+          <a class="edit" id="{{onePostById.id}}" href="/edit/{{onePostById.id}}">Редактировать</a>
+        </div>
+        {{/if}}
+      </div>
+    </div>
+    <div class="comment-form-container">
+      <form class="addCommentOrder" data-id="{{onePostById.id}}">
+        <div class="mb-3">
+          <textarea name="comments" class="form-control" aria-describedby="emailHelp" required="true"
+            placeholder="Оставить комментарий"></textarea>
+        </div>
+        <button type="submit" id="{{onePostById.id}}" href="/{{onePostById.id}}/comment"
+          class="btn btn-primary btn-comment">
+          Оставить комментарий
+        </button>
+      </form>
+      <div>
+        {{#if name}}
+        <div class="listOfComment">
+          {{#each allComment}}
+          <div class="comment-container">
+            <div class="commen-user-name">
+              Никнейм:&nbsp;&nbsp;&nbsp;&nbsp;{{this.commentName}}
+            </div>
+            <div class="commen-text">{{this.comments}}</div>
+          </div>
+          {{/each}}
+        </div>
+        {{/if}}
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
