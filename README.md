@@ -1,7 +1,7 @@
 # Tea-Blog
 <br/>
 
-## Вэб приложение-блог о чаях всего мира.
+## Веб приложение-блог о чаях всего мира.
 <br/>
 
 ### Используемые технологии: JavaScript, Express.js, Node.js, PostgreSQL, Sequelize ORM, Handlebars, Bootstrap
